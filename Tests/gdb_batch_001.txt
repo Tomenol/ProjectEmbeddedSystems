@@ -1,0 +1,16 @@
+set remotetimeout 10000
+shell echo set logging file %WORKSPACE%\%PROJECT%\Tests\gdb_result_001.txt > tmp.txt
+source tmp.txt
+shell del tmp.txt
+set logging overwrite on
+set logging on
+set height 0
+set print pretty on
+set print array on
+tar extended-remote localhost:1234
+load
+mon perf reset
+start
+cont
+mon quit
+detach

@@ -1,0 +1,21 @@
+warning: Can not parse XML target description; XML support was disabled at compile time
+0x00000000 in ?? ()
+Loading section .text, size 0xdae90 lma 0x40000000
+Loading section .gcc_except_table, size 0x4eaf lma 0x400dae90
+Loading section .rodata, size 0x86c0 lma 0x400dfd40
+Loading section .data, size 0x7a808 lma 0x400e8400
+Start address 0x40000000, load size 1453063
+Transfer rate: 17304 KB/sec, 15794 bytes/write.
+Temporary breakpoint 1 at 0x400013c8: file ..\src\ProjectEmbeddedSystems.cpp, line 18.
+[New Thread 2]
+
+Thread 1 hit Temporary breakpoint 1, main () at ..\src\ProjectEmbeddedSystems.cpp:18
+warning: Source file is more recent than executable.
+18		char flag_first_start = 0;
+
+Thread 1 received signal SIGSEGV, Segmentation fault.
+SortEngine::heapSort (this=0x407ffc1c, toSort=0x272927d0, len=100) at ..\src\SortEngine.cpp:91
+91				savedValue=toSort[--l];
+
+C:\Users\mayna\Tools\workspace\ProjectEmbeddedSystems\Tests\gdb_batch_001.txt:16: Error in sourced command file:
+Remote communication error.  Target disconnected.: Not a directory.
