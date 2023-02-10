@@ -19,8 +19,9 @@ int main()
 
 	for(unsigned int iteration_id=0; iteration_id < uiSimCount; iteration_id++)
 	{
-		test(0)
+		test("compute_median", 0);
 		compute_median(iteration_id, median);
+		test("compute_median", 1);
 	}
 }
 
