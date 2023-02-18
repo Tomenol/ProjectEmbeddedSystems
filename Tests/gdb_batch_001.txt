@@ -8,8 +8,30 @@ set height 0
 set print pretty on
 set print array on
 tar extended-remote localhost:1234
+
 load
 mon perf reset
+
+set $time = 0.0
+
+hbreak test
+commands
+	silent	
+	printf "\n**** test = %s ****\n", testName
+	
+	if (testId == 0)
+		mon perf reset
+	end
+	
+	if (testId == 1) 
+		mon perf
+		print ctx
+		mon perf reset
+	end
+	
+	cont
+end
+
 start
 cont
 mon quit

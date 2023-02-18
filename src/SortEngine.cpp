@@ -45,7 +45,7 @@
 
 SortEngine::SortEngine() {
 	// By default, the sorting algorithm is Heapsort
-	m_sortType=HEAP;
+	m_sortType=QUICK;
 }
 
 SortEngine::~SortEngine() {
