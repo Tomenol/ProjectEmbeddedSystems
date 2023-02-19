@@ -61,23 +61,27 @@ void simulation()
 	{
 		test("reset", 0);
 
+		// acquire data
+		ctx.acquire_sensor_data(iteration_id);
+		test("acquire_raw_data", 1);
+
 		// compute median
-		ctx.compute_median(iteration_id);
+		ctx.compute_median();
 		test("compute_median", 1);
 
 		// compute mean (remove outliers)
-		ctx.compute_mean(iteration_id);
+		ctx.compute_mean();
 		test("compute_mean", 1);
 
 		if(iteration_id == 0)
 		{
-			ctx.store_reference(iteration_id);
+			ctx.store_reference();
 			test("store_reference", 1);
 		}
 		else
 		{
 			// compute hotspots
-			ctx.compute_hotspot_count(iteration_id);
+			ctx.compute_hotspot_count();
 			test("compute_hotspot_count", 1);
 		}
 	}

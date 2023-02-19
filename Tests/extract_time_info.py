@@ -1,7 +1,7 @@
 import numpy as np
 
 filename = "gdb_result_001.txt"
-test_names = ["compute_median", "compute_mean", "store_reference", "compute_hotspot_count"]
+test_names = ["acquire_raw_data", "compute_median", "compute_mean", "store_reference", "compute_hotspot_count"]
 
 file = open(filename, "r")
 

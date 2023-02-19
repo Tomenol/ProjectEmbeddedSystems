@@ -19,13 +19,15 @@
 class ProcessingCtx
 {
 private:
+	unsigned short raw_data[uiSensorSize][uiSensorSize];
+
 	unsigned short median[uiSensorSize];
 
 	unsigned short mean[uiSensorSize];
 	unsigned short v_ref[uiSensorSize];
 	unsigned short vs[uiSensorSize];
 
-	unsigned short hs_count[uiSimCount];
+	unsigned short hs_count;
 
 	SortEngine sort_engine;
 public:
@@ -34,10 +36,11 @@ public:
 
 	void set_sort_type(SortEngine::SortType _sort_type);
 
-	void compute_median(unsigned int _iteration_id);
-	void compute_mean(unsigned int _iteration_id);
-	void store_reference(unsigned int _iteration_id);
-	void compute_hotspot_count(unsigned int _iteration_id);
+	void acquire_sensor_data(unsigned int _iteration_id);
+	void compute_median();
+	void compute_mean();
+	void store_reference();
+	void compute_hotspot_count();
 };
 
 #endif /* PROCESSING_H_ */

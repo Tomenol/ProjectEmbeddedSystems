@@ -25,7 +25,7 @@ commands
 	
 	if (testId == 1) 
 		mon perf
-		print ctx
+		print ctx.hs_count
 		mon perf reset
 	end
 	
