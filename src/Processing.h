@@ -31,7 +31,10 @@ private:
 
 	SortEngine sort_engine;
 public:
-	ProcessingCtx() {}
+	ProcessingCtx()
+	{
+		this->hs_count = 0;
+	}
 	~ProcessingCtx() {}
 
 	void set_sort_type(SortEngine::SortType _sort_type);
