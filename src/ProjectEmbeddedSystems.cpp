@@ -17,8 +17,10 @@ void sim_quicksort();
 void simulation();
 int main();
 
+// Class encapsulating the data processing algorithm
 ProcessingCtx ctx;
 
+// Perform the simulation for both the Quicksort and Heapsort sorting algorithms
 int main()
 {
 	// simulate computations using quicksort
